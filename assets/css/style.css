@@ -96,10 +96,11 @@ h2{
 
 .about{
     display: flex;
+    margin-left: 28%;
 }
 
 .about img{
-    width: 30%;
+    width: 20%;
     display: flex;
     flex-wrap: wrap;
     height: auto;
@@ -115,16 +116,20 @@ h2{
 }
 
 #p{
-    padding: 3%;
+    padding: 1%;
     margin: 3%;
     font-size: 20px;
+    margin-left: 28%;
 }
 
 /* contact me  */
 
 form .contact{
     border: 2px solid black;
-    width: auto;
+    width: fit-content;
+    margin-left: 28%;
+    margin-bottom: 25px;
+    padding: 5px;
 }
 textarea {
     width: 100%;
@@ -133,6 +138,13 @@ textarea {
 }
 
 #btt{
-    width: 5px;
-    
+    font-size: 30px;
+    margin: 5px;
 }
+
+#btt button{
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+}
+
