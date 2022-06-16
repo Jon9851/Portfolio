@@ -5,7 +5,10 @@
 }
 
 body{
-    background: ;
+    background: white;
+}
+img {
+    opacity: 0.4;
 }
 
 h5{
@@ -88,4 +91,48 @@ h2{
     font-size: larger;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
+}
+
+
+.about{
+    display: flex;
+}
+
+.about img{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0;
+    border-radius: 90px 90px;
+}
+
+.about h4{
+    font-size: 50px;
+    padding: 2%;
+    margin: 2%;
+    margin-top: 8%;
+}
+
+#p{
+    padding: 3%;
+    margin: 3%;
+    font-size: 20px;
+}
+
+/* contact me  */
+
+form .contact{
+    border: 2px solid black;
+    width: auto;
+}
+textarea {
+    width: 100%;
+    height: 200px;
+    background-color: transparent;
+}
+
+#btt{
+    width: 5px;
+    
 }
