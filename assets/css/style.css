@@ -1,3 +1,91 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: ;
+}
+
 h5{
     color: white;
+}
+/* h1 animations */
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 10s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+/* images cards css */
+.container{
+    display: flex;
+    padding: 1%;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.card{
+    background-color: white;
+    width: 280px;
+    height: 500px;
+    margin: 10px;
+}
+
+.card-image{
+    background-color: beige;
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+}
+
+.car-1{
+    background-image: url("https://i.postimg.cc/Tw70Rp9d/pro1.png");
+}
+
+.car-2{
+    background-image: url("https://i.postimg.cc/cLYCB2t0/pro2.png");
+}
+
+.car-3{
+    background-image: url("https://i.postimg.cc/7LZ6r6QY/responisvems3.png");
+}
+
+.btn{
+    margin: 10%;
+    margin-left: 35%;
+    border-radius: 10px;
+}
+
+.card:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+h2{
+    font-size: larger;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
 }
