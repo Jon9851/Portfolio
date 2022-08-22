@@ -5,15 +5,29 @@
 }
 
 body{
-    background: white;
+    background: black;
+}
+/* Nav bar  */
+nav {
+    background-color: #dfbd69;
+}
+nav .brand-logo {
+  
+    color: #000;
+}
+nav ul a {
+    color: #000; 
 }
 img {
     opacity: 0.4;
 }
-
-h5{
-    color: white;
+.slider .indicators .indicator-item {
+    background-color: white;
 }
+.slider .indicators .indicator-item.active {
+    background-color: #dfbd69;
+}
+
 /* h1 animations */
 h1 {
     text-align: center;
@@ -22,7 +36,7 @@ h1 {
     font-size: 2em;
     letter-spacing: 4px;
     overflow: hidden;
-    background: linear-gradient(90deg, #000, #fff, #000);
+    background: linear-gradient(90deg, #dfbd69, white, #dfbd69);
     background-repeat: no-repeat;
     background-size: 80%;
     animation: animate 10s linear infinite;
@@ -48,21 +62,32 @@ h1 {
 }
 
 .card{
-    background-color: white;
+    background-color: #000;
     width: 280px;
     height: 500px;
     margin: 10px;
+    color: #dfbd69;
+    border: 4px solid #dfbd69;
 }
 
 .card-image{
-    background-color: beige;
+    background-color: black;
     height: 170px;
     margin-bottom: 15px;
     background-size: cover;
 }
-
+.btn, .btn-large, .btn-small {
+ 
+    color: #000;
+    background-color: #dfbd69;
+  
+}
+.btn:hover{
+    color: #dfbd69;
+    background-color: #000;
+}
 .car-1{
-    background-image: url("https://i.postimg.cc/Tw70Rp9d/pro1.png");
+    background-image: url("https://i.postimg.cc/VLmDZL2k/project1.jpg");
 }
 
 .car-2{
@@ -85,8 +110,8 @@ h1 {
 }
 
 .card:hover{
-    background-color: black;
-    color: white;
+    background-color: #dfbd69;
+    color: #000 !important;
     cursor: pointer;
     transform: scale(1.03);
     transition: all 1s ease;
@@ -118,6 +143,7 @@ h2{
     padding: 2%;
     margin: 2%;
     margin-top: 8%;
+    color: #dfbd69;
 }
 
 #p{
@@ -125,14 +151,16 @@ h2{
     margin: 3%;
     font-size: 20px;
     margin-left: 28%;
+    color: #dfbd69;
+    
 }
 
 /* contact me  */
 
 form .contact{
-    border: 2px solid black;
+    border: 2px solid #dfbd69;
     width: fit-content;
-    margin-left: 28%;
+    margin-left: 25%;
     margin-bottom: 25px;
     padding: 5px;
 }
@@ -148,8 +176,31 @@ textarea {
 }
 
 #btt button{
-    background-color: #000;
-    color: #fff;
+    background-color: #dfbd69;
+    color: #000;
     border-radius: 10px;
+    width: 20%;
+    border: 2px solid #000;
 }
 
+h5{
+    color: #dfbd69;
+}
+
+label {
+    font-size: .8rem;
+    color: #dfbd69;
+}
+
+input{
+    background-color: white !important;
+}
+textarea{
+    background-color: white;
+}
+
+.page-footer {
+    padding-top: 20px;
+    color: #000;
+    background-color: #dfbd69;
+}
