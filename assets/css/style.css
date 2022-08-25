@@ -3,23 +3,27 @@
     padding: 0;
     margin: 0;
 }
-
 body{
-    background: white;
+    background-color: #000;
 }
 /* Nav bar  */
 nav {
-    background-color: #dfbd69;
+    background-color: #000;
+    height: 8rem;
 }
 nav .brand-logo {
-  
     color: #000;
 }
 nav ul a {
-    color: #000; 
+    color: #dfbd69; 
 }
 img {
-    opacity: 0.4;
+    width: 100%;
+    height: 7rem;
+}
+nav .nav-wrapper {
+    position: relative;
+    height: 100%;
 }
 .slider .indicators .indicator-item {
     background-color: white;
@@ -150,12 +154,12 @@ h2{
     padding: 1%;
     margin: 3%;
     font-size: 15px;
-    margin-left: 20%;
+    margin-left: 18%;
     color: #dfbd69;   
 }
 .fa-solid, .fas {
     font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+    font-weight: 900;`
     font-size: 20px;
     color: #dfbd69;
 }
@@ -164,7 +168,7 @@ h2{
 form .contact{
     border: 2px solid #dfbd69;
     width: fit-content;
-    margin-left: 25%;
+    margin-left: 22%;
     margin-bottom: 25px;
     padding: 5px;
 }
@@ -205,6 +209,11 @@ textarea{
 
 .page-footer {
     padding-top: 20px;
-    color: #000;
-    background-color: #dfbd69;
+    color: #dfbd69;
+    background-color: #000;
+}
+
+#logo-footer{
+    width: 8%;
+    height: 6rem;
 }
