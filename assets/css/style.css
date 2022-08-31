@@ -47,7 +47,16 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
   }
-  
+h3{
+    color: #dfbd69;
+    text-shadow: 2px 2px black;
+    font-size: 4rem;
+}
+h5{
+    color: #dfbd69 !important;
+    text-shadow: 2px 2px #000;
+    font-size: 2rem;
+}
   @keyframes animate {
     0% {
       background-position: -500%;
@@ -56,6 +65,14 @@ h1 {
       background-position: 500%;
     }
   }
+
+.slider{
+    border: 3px solid #dfbd69;
+    border-radius: 10px 6px ;
+}
+#img{
+    opacity: 0.5;
+}
 /* images cards css */
 .container{
     display: flex;
@@ -68,7 +85,7 @@ h1 {
 .card{
     background-color: #000;
     width: 280px;
-    height: 500px;
+    height: 890px;
     margin: 10px;
     color: #dfbd69;
     border: 4px solid #dfbd69;
@@ -127,7 +144,10 @@ h2{
     text-align: center;
 }
 
-
+p{
+    font-size: 11px;
+    margin: 1%;
+}
 .about{
     display: flex;
     margin-left: 28%;
@@ -216,4 +236,67 @@ textarea{
 #logo-footer{
     width: 8%;
     height: 6rem;
+}
+
+@media (max-width: 991px){
+    h3{
+        font-size: 40px;
+    }
+
+    .slider{
+        margin: auto;
+        border-radius: 10px 6px;
+    }
+    .about h4{
+        font-size: 30px;
+    }
+    #p{
+        margin-right: 12%;
+    }
+    form .contact {
+        border: 2px solid #dfbd69;
+        width: fit-content;
+        margin-right: 15%;
+        margin-bottom: 25px;
+        padding: 5px;
+    }
+    #btt button {
+        background-color: #dfbd69;
+        color: #000;
+        border-radius: 10px;
+        width: 40%;
+        height: 40px;
+        border: 2px solid #000;
+        font-size: 15px;
+    }
+
+    a {
+        color: #dfbd69;
+        font-size: 15px;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    nav .sidenav-trigger i {
+        height: 56px;
+        line-height: 56px;
+        color: #dfbd69;
+    }
+
+    #logo-footer {
+        width: 30%;
+        height: 6rem;
+    }
+    .sidenav{
+        background-color: #000;
+    }
+    .sidenav li>a{
+        color: #dfbd69;
+        background-color: #000;
+    }
+    .sidenav li>a:hover {
+        color: #000;
+        background-color: #dfbd69;
+    }
+
+
 }
