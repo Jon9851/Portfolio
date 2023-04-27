@@ -1221,10 +1221,14 @@
     }
   
     .content-card {
-      padding: 30px;
-      padding-top: 25px;
-    }
-  
+      padding: 4rem;
+      padding-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      justify-content: space-evenly;
+      border: #daa520 2px solid;
+  }
     /**
      * #RESUME
      */
