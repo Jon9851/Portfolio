@@ -270,7 +270,6 @@
     padding-top: 45px;
     border-radius: 14px;
     box-shadow: var(--shadow-2);
-    cursor: pointer;
     z-index: 1;
   }
   
@@ -1045,8 +1044,7 @@
     object-fit: cover;
     transition: var(--transition-1);
   }
-  
-  .project-item > a:hover img { transform: scale(1.1); }
+
   
   .project-title,
   .project-category { margin-left: 10px; }
@@ -1261,6 +1259,7 @@
     }
   
     .content-card {
+      height: 12rem;
       padding: 4rem;
       padding-top: 15px;
       display: flex;
