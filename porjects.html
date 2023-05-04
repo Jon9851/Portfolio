@@ -1,268 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-
-  <!--
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/63b4bf476b.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-  <!--
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/63b4bf476b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--
     - #MAIN
   -->
-
-  <main>
-
-    <!--
+    <main>
+      <!--
       - #SIDEBAR
     -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="assets/images/logo.jpeg" alt="Jonathan Cohen" width="150">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Jonathan Cohen">Jonathan Cohen</h1>
-
-          <p class="title">Junior FullStack Developer</p>
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img src="assets/images/logo.jpeg" alt="Jonathan Cohen" width="150">
+          </figure>
+          <div class="info-content">
+            <h1 class="name" title="Jonathan Cohen">Jonathan Cohen</h1>
+            <p class="title">Junior FullStack Developer</p>
+          </div>
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
         </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:joncohen21k@hotmail.co.uk" class="contact-link">joncohen21k@hotmail.co.uk</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="+447368254543" class="contact-link">+447368254543</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </div>
-
-            <div class="contact-info">
-               <a href="https://www.linkedin.com/in/jonathan-cohen-8447ba162?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BsoD%2FUBq%2FSUmXmHzI6BsbjQ%3D%3D">
-              <p class="contact-title"></i>Jonathan Cohen</p></a>
-            </div>
-
-          </li>
-          <li class="contact-item">
-            <div class="icon-box">
-            <i class="fa fa-file" aria-hidden="true"></i></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">CV <a href="assets/css/pdf/Jonathan_Cohen_CV (1).PDF" style="color:gold"></a></p>
-            </div>
-          </li>
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+                <a href="mailto:joncohen21k@hotmail.co.uk" class="contact-link">joncohen21k@hotmail.co.uk</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+                <a href="+447368254543" class="contact-link">+447368254543</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </div>
+              <div class="contact-info">
+                <a href="https://www.linkedin.com/in/jonathan-cohen-8447ba162?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BsoD%2FUBq%2FSUmXmHzI6BsbjQ%3D%3D">
+                  <p class="contact-title">
+                    </i>Jonathan Cohen </p>
+                </a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <i class="fa fa-file" aria-hidden="true"></i>
+                </ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">CV <a href="assets/css/pdf/Jonathan_Cohen_CV (1).PDF" style="color:gold"></a>
+                </p>
+              </div>
+            </li>
+          </ul>
+          <div class="separator"></div>
+        </div>
+        <li class="contact-item">
+          <div class="icon-box">
+            <ion-icon name="location-outline"></ion-icon>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">Location</p>
+            <address>Manchester , England</address>
+          </div>
+        </li>
         </ul>
         <div class="separator"></div>
-      </div>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address>Manchester , England</address>
-            </div>
-          </li>
-        </ul>
-        <div class="separator"></div>
-      </div>
-
-    </aside>
-   <!--
+        </div>
+      </aside>
+      <!--
       - #main-content
     -->
-
-    <div class="main-content">
-
+      <div class="main-content">
         <!--
           - #NAVBAR
         -->
-  
         <nav class="navbar">
-  
           <ul class="navbar-list">
-  
             <li class="navbar-item">
-                <a href="index.html">
-              <button class="navbar-link  active" data-nav-link>Home</button>
-            </a>
+              <a href="index.html">
+                <button class="navbar-link  active" data-nav-link>Home</button>
+              </a>
             </li>
-  
             <li class="navbar-item">
-                <a href="porjects.html"></a>
+              <a href="porjects.html"></a>
               <button class="navbar-link" data-nav-link>Projects</button>
-            </a>
-          </li>
+              </a>
+            </li>
           </ul>
         </nav>
         <section class="service">
-
-            <h3 class="h3 service-title">projects</h3>
-  
-            <ul class="service-list">
-  
-              <li class="service-item">
-  
-                <div class="service-icon-box">
-                  <img src="./assets/images/icon-design.svg
+          <h3 class="h3 service-title">projects</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
                   " alt="design icon" width="40">
-                </div>
-  
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Web design</h4>
-  
-                  <p class="service-item-text">
-                    The most modern and high-quality design made at a professional level.
-                  </p>
-                </div>
-  
-              </li>
-  
-              <li class="service-item">
-  
-                <div class="service-icon-box">
-                  <img src="assets/images/imr2.png" alt="Web development icon" width="300px">
-                </div>
-  
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Project 2</h4>
-  
-                  <p class="service-item-text">
-                    creating is a history quiz that will test users' knowledge of world history from different centuries. The website's structure is being built using HTML5, while CSS is being used to create the website's styling. Balsamiq is being used to create wireframes for the website, and Gitpod is being used to deploy it. GitHub is being used to host and edit the website code, and Code Beautify is being used to test and run the code. You are testing the HTML and CSS code using W3 Schools, and JavaScript (ES6) is being used to build the quiz. The website is also being tested for responsiveness on all devices using ami responsive design.
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+                <p class="service-item-text"> The most modern and high-quality design made at a professional level. </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="assets/images/imr2.png" alt="Web development icon" width="300px">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Project 2</h4>
+                <p class="service-item-text"> creating is a history quiz that will test users' knowledge of world history from different centuries. The website's structure is being built using HTML5, while CSS is being used to create the website's styling. Balsamiq is being used to create wireframes for the website, and Gitpod is being used to deploy it. GitHub is being used to host and edit the website code, and Code Beautify is being used to test and run the code. You are testing the HTML and CSS code using W3 Schools, and JavaScript (ES6) is being used to build the quiz. The website is also being tested for responsiveness on all devices using ami responsive design. You chose to create this quiz because you are passionate about history and believe that it is important to learn from the past to avoid repeating mistakes. You were inspired to create a quiz after doing research on the top 10 JavaScript projects for beginners, which frequently included quizzes. By building this project, you hope to learn more about JavaScript and create a fun and educational tool for others to use. </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="assets/images/responisvems31.PNG" alt="mobile app icon" width="280">
+              </div>
+              <div class="service-content-box">
+                <a href="https://jon9851.github.io/ms3-/">
+                <h4 class="h4 service-item-title">Project 3</h4></a>
+                <p class="service-item-text"> The website uses several different languages and is a combination of POSTGRESSQL and MONGODB. So what are the language and technology did I use for the creation of the database. PostgreSQL and Mongo dB were used to create the database it is self, with python language used to create the routes for the database. I defiantly found it tricky to combine both databases and the overall creation of the database.<br><br>PostgreSQL part of the database includes the publisher's titles and review sections of the database. The Mongo dB side of the database handles the user’s login and registration which I have included a Werkzeug password hash to help protect users and included defensive programming for users as well.
+                                              <br><br>Python 3 was used to create the models and routes for the site. Html, CSS and JavaScript were used to create the front end of the website. For the design of the front end, I used Materialize templates which include custom CSS and responsiveness for all devices included in the package. 
+                                              <br><br>My overall goal for this project was to keep the HTML JavaScript and CSS simple as I wanted to ensure that I added full CRUD functionality to all pages of the database with flash messages and a fully functioning register and login system with a logout capability. This project certainly tested me during it is development. Below is a list of technologies used to create the project</p><br>
+                                              <h4 style="color: white; text-align: left;">Technologies Used</h4>
+                                              <ol id="tech">
+                                                <li>HTML 5</li>
+                                                <li>CSS 3</li>
+                                                <li>Python 3</li>
+                                                <li>Balsamiq Wireframes</li>
+                                                <li>GitPod</li>
+                                                <li>GitHub</li>
+                                                <li>Code Beautify</li>
+                                                <li>JavaScript ES6</li>
+                                                <li>AMI Responsive</li>
+                                                <li>MongoDB</li>
+                                                <li>PostgreSQL</li>
+                                                <li>Bootstrap 5</li>
+                                                <li>Werkzeug Password Hash</li>
+                                              </ol>
 
-You chose to create this quiz because you are passionate about history and believe that it is important to learn from the past to avoid repeating mistakes. You were inspired to create a quiz after doing research on the top 10 JavaScript projects for beginners, which frequently included quizzes. By building this project, you hope to learn more about JavaScript and create a fun and educational tool for others to use.
-                  </p>
-                </div>
-  
-              </li>
-  
-              <li class="service-item">
-  
-                <div class="service-icon-box">
-                  <img src="assets/images/responisvems31.PNG" alt="mobile app icon" width="280">
-                </div>
-  
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Mobile apps</h4>
-                  <p class="service-item-text">
-The website uses a number of different languages and is a combination of POSTGRESSQL and MONGODB.
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="assets/images/responsive.png" alt="camera icon" width="280">
+              </div>
+              <div class="service-content-box">
+                <a href="https://eshopms4.herokuapp.com/">
+                <h4 class="h4 service-item-title">Project 4</h4></a>
+                <p class="service-item-text">E-shop is an e-commerce online store that offers a wide range of tech products for its users. The site is designed to be user-friendly with a simple navigation bar and dropdown menu that displays all available categories and products. The site is built using the Django framework and PostgreSQL to manage the inventory database, while Stripe payments provide secure checkout payment. The site also features a user profile that includes order history and a complete list of user purchases. Bootstrap 4 was used to create many of the site's features, and the colour scheme is primarily purple and white with red serving as the warning colour. 
+                  <br><br>The product page displays product cards in rows of four with a purple border, and each card includes edit and delete buttons, a category tag, a price, and a brief description of the product. The homepage includes a search bar and a profile menu with a shopping bag, and there is also an image and a button that takes you to the online store's all-products page. 
+                  <br><br>In addition to Django, Python3 is used to create the site's routes, while Balsamiq is used for wireframing. Gitpod and Github are used for deploying and hosting the site's code, respectively, and Code Beautify and W3 Schools are used for testing HTML and CSS code. JavaScript (ES6) is used for the site's functionality, and responsive design is tested on all devices using ami. Heroku is used for deployment, MongoDB is used for the user database, and PostgreSQL is used for the publisher games and reviews database. PEP8 Online Checker is used to check Python routes, and Bootstrap4 is used to create HTML templates. Django_Allauth is used to provide security for the app, and Dropbox is used to store images before AWS deployment. 
+                  <br><br>Miro is used to create the E-shop diagram, while Amazon Web Services is used on the deployed version to store static and image files. Finally, Stripe is used for card payments on the online store. </p><br>
+                  <h4 style="color: white; text-align: left;">Technologies Used</h4>
+                                              <ol id="tech">
+                                                <li>HTML 5</li>
+                                                <li>CSS 3</li>
+                                                <li>Python 3</li>
+                                                <li>Balsamiq Wireframes</li>
+                                                <li>GitPod</li>
+                                                <li>GitHub</li>
+                                                <li>Code Beautify</li>
+                                                <li>JavaScript ES6</li>
+                                                <li>AMI Responsive</li>
+                                                <li>MongoDB</li>
+                                                <li>PostgreSQL</li>
+                                                <li>Bootstrap 5</li>
+                                                <li>Django</li>
+                                                <li>Django_Allauth</li>
+                                                <li>AWS</li>
+                                                <li>Stripe</li>
+                                                <li>Heroku</li>
+                                              </ol>
 
-So what are the language and technology’s did I use for the creation of the database.
-
-PostgreSQL and Mongo dB were used to create the database it is self, with python language used to create the routes for the database. I defiantly found tricky combining both database and the overall creation of the database.
-
-PostgreSQL part of the database includes the publishers titles and review sections of the database. The Mongo dB side of the database handles the user’s login and registration which I have included a Werkzeug password hash to help protect users and included defensive programming for users as well. I originally wanted to have the user’s models created inside the PostgreSQL database, but I found creating the routes to difficult as there was no learning materials provided for this, so I decided to user mongo dB instead.
-
-Python 3 was used to create the models and routes for the site.
-
-Html, CSS and JavaScript were used to create the front end of the website. For the design of the front end, I used Materialize templates which includes custom CSS and responsiveness for all devices included in the package. All images I have used in the website are all for educational purposes only.
-
-My overall goal for this project was to keep the html JavaScript and CSS simple as I wanted to ensure that I added full CRUD functionality to all pages of the database with flash messages and a fully functioning register and login system with a logout capability.
-
-This project certainly tested me during it is development.
-
-                  </p>
-                </div>
-  
-              </li>
-  
-              <li class="service-item">
-  
-                <div class="service-icon-box">
-                  <img src="assets/images/responsive.png" alt="camera icon" width="280">
-                </div>
-  
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Project 4</h4>
-  
-                  <p class="service-item-text">
-                    Eshop is an e-commerce online store that offers a wide range of tech products for its users. The site is designed to be user-friendly with a simple navigation bar and dropdown menu that displays all available categories and products. The site is built using the Django framework and PostgreSQL to manage the inventory database, while Stripe payments provide secure checkout payment. The site also features a user profile that includes order history and a complete list of user purchases.
-
-                    Bootstrap 4 was used to create many of the site's features, and the color scheme is primarily purple and white with red serving as the warning color. The product page displays product cards in rows of four with a purple border, and each card includes edit and delete buttons, a category tag, price, and a brief description of the product. The homepage includes a search bar and a profile menu with a shopping bag, and there is also an image and a button that takes you to the online store's all products page.
-                    
-                    In addition to Django, Python3 is used to create the site's routes, while Balsamiq is used for wireframing. Gitpod and Github are used for deploying and hosting the site's code, respectively, and Code Beautify and W3 Schools are used for testing HTML and CSS code. JavaScript (ES6) is used for the site's functionality, and responsive design is tested on all devices using ami. Heroku is used for deployment, and MongoDB is used for the user database, while PostgreSQL is used for the publisher games and reviews database. PEP8 Online Checker is used to check Python routes, and Bootstrap4 is used to create HTML templates. Django_Allauth is used to provide security for the app, and Dropbox is used to store images before AWS deployment. Miro is used to create the eshop diagram, while Amazon Web Services is used on the deployed version to store static and image files. Finally, Stripe is used for card payments on the online store.
-                  </p>
-                </div>
-  
-              </li>
-  
-            </ul>
-</section>
-  <!--
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
+        <script src="assets/script/script.js"></script>
+        <!--
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
 </html>
-  
-  
-
-
