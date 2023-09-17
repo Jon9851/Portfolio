@@ -1,266 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <!--
-    - custom css link
-  -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <!--
-    - google font link
-  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/63b4bf476b.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <!--
-    - #MAIN
-  -->
-    <main>
-      <!--
-      - #SIDEBAR
-    -->
-      <aside class="sidebar" data-sidebar>
-        <div class="sidebar-info">
-          <figure class="avatar-box">
-            <img src="assets/images/logo.jpeg" alt="Jonathan Cohen" width="150px">
-          </figure>
-          <div class="info-content">
-            <h1 class="name" title="Jonathan Cohen">Jonathan Cohen</h1>
-            <p class="title">Junior FullStack Developer</p>
-          </div>
-          <button class="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
-            <ion-icon name="chevron-down"></ion-icon>
+    <nav id="desktop-nav">
+      <div class="logo">Jonathan Cohen</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">John Doe</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Jonathan Cohen</h1>
+        <p class="section__text__p2">Fullstack Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('assets/My_CV.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
           </button>
         </div>
-        <div class="sidebar-info_more">
-          <div class="separator"></div>
-          <ul class="contacts-list">
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-              <div class="contact-info">
-                <p class="contact-title">Email</p>
-                <a href="mailto:joncohen21k@hotmail.co.uk" class="contact-link">joncohen21k@hotmail.co.uk</a>
-              </div>
-            </li>
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="phone-portrait-outline"></ion-icon>
-              </div>
-              <div class="contact-info">
-                <p class="contact-title">Phone</p>
-                <a href="+447368254543" class="contact-link">+447368254543</a>
-              </div>
-            </li>
-            <li class="contact-item">
-              <div class="icon-box">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </div>
-              <div class="contact-info">
-                <a href="https://www.linkedin.com/in/jonathan-cohen-8447ba162?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BsoD%2FUBq%2FSUmXmHzI6BsbjQ%3D%3D">
-                  <p class="contact-title">
-                    </i>Jonathan Cohen </p>
-                </a>
-              </div>
-            </li>
-            <li class="contact-item">
-              <div class="icon-box">
-                <i class="fa fa-file" aria-hidden="true"></i>
-                </ion-icon>
-              </div>
-              <div class="contact">
-                <p class="contact-title">CV<a href="" style="color:gold" download></a>
-              </div>
-            </li>
-          </ul>
-          <div class="separator"></div>
+        <div id="socials-container">
+          <img
+            src="assets/icons8-linkedin-144.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/jonathan-cohen-8447ba162/'"
+          />
+          <img
+            src="assets/icons8-github-200.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/Jon9851'"
+          />
         </div>
-        <li class="contact-item">
-          <div class="icon-box">
-            <ion-icon name="location-outline"></ion-icon>
-          </div>
-          <div class="contact-info">
-            <p class="contact-title">Location</p>
-            <address>Manchester , England</address>
-          </div>
-        </li>
-        </ul>
-        <div class="separator"></div>
-        </div>
-      </aside>
-      <!--
-      - #main-content
-    -->
-      <div class="main-content">
-        <!--
-        - #NAVBAR
-      -->
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <a href="index.html">
-                <button class="navbar-link  active" data-nav-link>Home</button>
-              </a>
-            </li>
-            <li class="navbar-item">
-              <a href="porjects.html">
-                <button class="navbar-link" data-nav-link>Projects</button>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!--
-        - #ABOUT
-      -->
-        <article class="about  active" data-page="about">
-          <header>
-            <h2 class="h2 article-title">About me</h2>
-          </header>
-          <section class="about-text">
-            <p>
-              <br>As an individual who is highly organised, ambitious and possesses excellent communication skills, I am excited to take on new challenges and explore opportunities in the world of software development. My experience working in a managerial role for the past 15 years has enabled me to develop strong leadership skills, which coupled with my determined and ambitious attitude, makes me well-suited for a career in software development.
-            <p>
-              <br>I am confident that I can apply this skill-set to the fast-paced environment of software development. I have a positive working relationship with colleagues and members of the public, which has empowered me to deliver consistently excellent customer service-2 throughout my career.
-            </p>
-            <p>
-              <br>In terms of technical skillsI have a solid understanding of HTML5, CSS3, and JavaScript, as well as experience working with Django, Postgresql (relational database) and Mongo db (non-relational database). I am a quick learner and am always eager to expand my knowledge and skill-set to stay up to date with the latest technologies and industry trends.
-          </section>
-          <!--
-          - service-2
-        -->
-          <section class="service-2">
-            <a href="porjects.html">
-            <h3 class="h3 service-2-title">My Projects</h3></a>
-            <ul class="service-2-list">
-              <li class="service-2-item">
-                <div class="service-2-icon-box">
-                  <img src="assets/images/project1.png" alt="design icon" width="200">
-                </div>
-                <div class="service-2-content-box">
-                  <h4 class="h4 service-2-item-title">Project 1</h4>
-                  <p class="service-2-item-text">My first ever website</p>
-                </div>
-              </li>
-              <li class="service-2-item">
-                <div class="service-2-icon-box">
-                  <img src="assets/images/imr2.png" alt="Web development icon" width="200">
-                </div>
-                <div class="service-2-content-box">
-                  <h4 class="h4 service-2-item-title">Project 2</h4>
-                  <p class="service-2-item-text"> Html 5 CSS 3 JavaScript </p>
-                </div>
-              </li>
-              <li class="service-2-item">
-                <div class="service-2-icon-box">
-                  <img src="assets/images/responisvems31.PNG" alt="mobile app icon" width="200">
-                </div>
-                <div class="service-2-content-box">
-                  <h4 class="h4 service-2-item-title">Project £</h4>
-                  <p class="service-2-item-text">Project 3 is a combined database of relational and non-relational built on python3  for the backend and html 5 css3 and JavaScript for the frontend.</p>
-                </div>
-              </li>
-              <li class="service-2-item">
-                <div class="service-2-icon-box">
-                  <img src="assets/images/responsive.png" alt="camera icon" width="200">
-                </div>
-                <div class="service-2-content-box">
-                  <h4 class="h4 service-2-item-title">Project 4</h4>
-                  <p class="service-2-item-text">Project 4 is a fully  functional e-commerce  store</p>
-                </div>
-              </li>
-            </ul>
-          </section>
-          <!-- skills -->
-          <section class="skill">
-            <h3 class="h3 skills-title">My skills</h3>
-            <ul class="skills-list content-card">
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Django Framework</h5>
-                  <i class='far fa-folder-open' style='color: #daa520;'></i>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Python 3</h5>
-                  <i class="fa-brands fa-python" style="color: #daa520;"></i>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">CSS 3</h5>
-                  <i class="fa-brands fa-css3-alt" style="color: #daa520;"></i>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">html5</h5>
-                  <i class="fa-brands fa-html5" style="color: #daa520;"></i>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">MongoDB</h5>
-                  <i class="fa-solid fa-database" style="color: #daa520;"></i>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">AWS</h5>
-                  <i class="fa-brands fa-aws" style="color: #daa520;"></i>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">PostgreSQL</h5>
-                  <i class="fa-solid fa-database" style="color: #daa520;"></i>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">MongoDB</h5>
-                  <i class="fa-solid fa-database" style="color: #daa520;"></i>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Github</h5>
-                  <i class="fa-brands fa-github" style="color: #daa520;"></i>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">DJango-Allauth</h5>
-                  <i class="fa-solid fa-lock" style="color: #daa520;"></i>
-                </div>
-              </li>
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Balsamiq Wireframe</h5>
-                  <i class="fa-solid fa-pencil" style="color: #daa520;"></i>
-                </div>
-              </li>
-            </ul>
-          </section>
-        </article>
       </div>
-    </main>
-    <!--
-    - custom js link
-  -->
-    <script src="assets/script/script.js"></script>
-    <!--
-    - ionicon link
-  -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>1+ years <br />Fullstack Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="assets/icons8-education-50.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Degree Web Application Development<br /></p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I have a degree in Software Development and proficiency in HTML, CSS, JavaScript, Python, MongoDB, PostgreSQL, MySQL, Django, and AWS.
+
+              I can create visually appealing web pages with HTML\/CSS, develop interactive web applications with JavaScript, and build scalable and secure web applications using Python and Django. 
+             
+             I am experienced in working with MongoDB, PostgreSQL, and MySQL for optimizing database performance and managing schemas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">My Tech Stack</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="assets/icons8-html-5-64.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML 5</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/icons8-css-48.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/icons8-react-16.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>ReactJS</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/icons8-javascript-48.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/icons8-bootstrap-48.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>BootStrap</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/icons8-wireframes-64.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Wireframes</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="assets/icons8-postgresql-48.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/icons8-nodejs-48.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/icons8-mongodb-48.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MongoDB</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/icons8-github-100.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>GitHub</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/icons8-python-144.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/icons8-django-50.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Django</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">Joncohen21k@hotmail.co.uk</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
