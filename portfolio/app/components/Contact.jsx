@@ -1,6 +1,7 @@
 import Image from 'next/image'; // Import Image component
 import { assets } from '@/assets/assets';
 import React, { useState } from 'react';
+import { motion } from 'framer-motion'; // Import framer-motion
 
 const Contact = () => {
   const [result, setResult] = useState("");
