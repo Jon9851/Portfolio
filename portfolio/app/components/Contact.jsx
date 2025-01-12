@@ -90,7 +90,7 @@ const Contact = () => {
 
           <motion.button
             type="submit"
-            className="w-full py-3 bg-black text-white font-semibold rounded-md hover:bg-gray-800 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full py-3 bg-black text-white font-semibold rounded-md hover:bg-gray-800 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-black"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }} // Delay for button
