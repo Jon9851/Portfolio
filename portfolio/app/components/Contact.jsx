@@ -59,7 +59,7 @@ const Contact = () => {
               type="text"
               placeholder="Enter Your Name"
               required
-              className="w-full px-4 py-3 border-2 border-black dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border-2 border-black dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-black"
               name="name"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -69,7 +69,7 @@ const Contact = () => {
               type="email"
               placeholder="Enter Your Email Address"
               required
-              className="w-full px-4 py-3 border-2 border-black dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border-2 border-black dark:text-black dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               name="email"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -81,7 +81,7 @@ const Contact = () => {
             rows="6"
             placeholder="Enter Your Message"
             required
-            className="w-full px-4 py-3 border-2 border-black dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-3 border-2 border-black dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-black"
             name="message"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
