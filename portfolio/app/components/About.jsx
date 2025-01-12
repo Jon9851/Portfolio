@@ -41,7 +41,9 @@ const About = () => {
         </div>
         <div className="flex-1">
           <p className="mb-10 max-w-full font-Ovo text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
-            I am a passionate Fullstack Developer with a Diploma in Software Development and a versatile skill set that bridges both front-end and back-end technologies...
+          I hold a Diploma in Software Development and bring a strong foundation in front-end and back-end technologies. My skills include proficiency in HTML, CSS, JavaScript, Python, MongoDB, PostgreSQL, MySQL, Django, and AWS.<br></br>
+          <br></br>On the front end, I focus on crafting user-friendly and visually appealing web interfaces using HTML, CSS, and JavaScript. On the back end, I have experience developing reliable and scalable web applications with Python and Django, ensuring functionality and performance.<br></br>
+          <br></br>I also have practical experience working with databases like MongoDB, PostgreSQL, and MySQL, optimizing performance, and managing schemas effectively. My passion for learning and commitment to creating seamless digital experiences make me a dedicated and valuable contributor to any development team.
           </p>
           <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {infoList.map(({ icon, title, description }, index) => (
