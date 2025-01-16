@@ -28,7 +28,7 @@ const About = () => {
   }, [darkMode]);
 
   return (
-    <div className="w-full px-6 sm:px-12 py-10 scroll-mt-20">
+    <div id="about" className="w-full px-6 sm:px-12 py-10 scroll-mt-20">
       <h4 className="text-center mb-2 text-lg font-Ovo">Introduction</h4>
       <h2 className="text-center text-4xl sm:text-5xl font-ovo">About Me</h2>
       <div className="flex w-full flex-col lg:flex-row items-center gap-16 my-20">

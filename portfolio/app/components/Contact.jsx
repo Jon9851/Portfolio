@@ -59,7 +59,7 @@ const Contact = () => {
               type="text"
               placeholder="Enter Your Name"
               required
-              className="w-full px-4 py-3 border-2 border-black dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-black"
+              className="w-full px-4 py-3 border-2 border-black dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               name="name"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
