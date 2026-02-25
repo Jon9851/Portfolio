@@ -1,21 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Special_Elite&family=Ovo&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4f1ea; 
+  --foreground: #222222;
+  --accent-red: #b91c1c; 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  /* FIXED: Deep black background for maximum contrast with grayscale images */
+  --background: #0a0a0a; 
+  --foreground: #d1d1d1;
+  --accent-red: #7f1d1d;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Ovo', serif; 
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+@layer components {
+  .font-comic { font-family: 'Bangers', cursive; letter-spacing: 0.05em; }
+  .font-detective { font-family: 'Special Elite', system-ui; }
+
+  .border-noir {
+    @apply border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:border-white dark:shadow-[8px_8px_0px_0px_rgba(185,28,28,0.4)];
+  }
+
+  .bg-halftone {
+    background-image: radial-gradient(rgba(0,0,0,0.1) 2px, transparent 0);
+    background-size: 25px 25px;
+  }
+  .dark .bg-halftone {
+    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 0);
+  }
 }

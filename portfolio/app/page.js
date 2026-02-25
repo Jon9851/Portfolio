@@ -10,25 +10,23 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
-  // Check system preference on mount and set darkMode accordingly
+  // Initialize theme
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme) {
-      // Use the stored theme if it exists
       setDarkMode(storedTheme === "dark");
     } else {
-      // Otherwise, use system preference
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       setDarkMode(prefersDark);
     }
   }, []);
 
-  // Apply dark or light mode based on the darkMode state
+  // FIXED: The toggle logic now properly uses an 'else' block
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
-      
+    } else {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
@@ -36,13 +34,13 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
-      <Header />
-      <About />
-      <Work />
-      <Contact />
-      <Footer />
-     
+      {/* Ensure darkMode prop is passed to every component */}
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Header darkMode={darkMode} />
+      <About darkMode={darkMode} />
+      <Work darkMode={darkMode} />
+      <Contact darkMode={darkMode} />
+      <Footer darkMode={darkMode} />
     </>
   );
 }

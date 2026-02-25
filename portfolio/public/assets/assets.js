@@ -43,7 +43,14 @@ import postgresql from './postgresql.png';
 import wireframes from './wireframes.png';
 import django from './django.png';
 import github from './github.png';
-import linkedin from './linkedin.png'
+import linkedin from './linkedin.png';
+import cityback from './cityback.png';
+import file from './file.png';
+import casefile from './casefile.png';
+import door from './door.png';
+import typew from './typew.png';
+import end from './end.png'
+
 export const assets = {
     user_image,
     code_icon,
@@ -90,7 +97,13 @@ export const assets = {
     wireframes,
     django,
     github,
-    linkedin
+    linkedin,
+    cityback,
+    file,
+    casefile,
+    door,
+    typew,
+    end
 };
 
 export const workData = [
@@ -157,3 +170,4 @@ export const infoList = [
 export const toolsData = [
     assets.vscode, assets.postgresql, assets.mongodb, assets.git, assets.react, assets.css, assets.javascript, assets.html, assets.nodejs, assets.django, assets.wireframes, assets.github
 ];
+
