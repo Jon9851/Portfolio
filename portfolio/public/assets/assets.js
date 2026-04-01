@@ -49,7 +49,8 @@ import file from './file.png';
 import casefile from './casefile.png';
 import door from './door.png';
 import typew from './typew.png';
-import end from './end.png'
+import end from './end.png';
+import walk from './walk.png'
 
 export const assets = {
     user_image,
@@ -103,7 +104,8 @@ export const assets = {
     casefile,
     door,
     typew,
-    end
+    end,
+    walk,
 };
 
 export const workData = [
