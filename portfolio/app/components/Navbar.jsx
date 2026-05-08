@@ -2,9 +2,9 @@ import { assets } from '@/public/assets/assets';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 
-const Navbar = () => {
+// Pass darkMode and setDarkMode as props from page.js
+const Navbar = ({ darkMode, setDarkMode }) => {
   const [isScroll, setIsScroll] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
   const sideMenuRef = useRef();
 
   const openMenu = () => {
@@ -16,26 +16,6 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme) {
-      setDarkMode(storedTheme === 'dark');
-    } else {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setDarkMode(prefersDark);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [darkMode]);
-
-  useEffect(() => {
     const handleScroll = () => {
       setIsScroll(window.scrollY > 50);
     };
@@ -45,10 +25,8 @@ const Navbar = () => {
 
   return (
     <>
-      {/* --- THE BACKGROUND STRIP (The actual "Visual" header) --- */}
+      {/* --- THE BACKGROUND STRIP --- */}
       <div className={`fixed top-0 left-0 w-full z-40 overflow-hidden border-b-4 border-black transition-all duration-300 ${isScroll ? 'h-16' : 'h-24'}`}>
-        
-        {/* The Image layer - Keeping opacity at 1 so it's visible, filters handle the Noir look */}
         <div className="absolute inset-0 w-full h-full">
           <Image 
             src={assets.typew} 
@@ -60,31 +38,24 @@ const Navbar = () => {
             `}
           />
         </div>
-
-        {/* Noir Halftone Overlay - sits on top of the image but behind the text */}
         <div className="absolute inset-0 z-10 opacity-20 pointer-events-none bg-[radial-gradient(circle,black_1px,transparent_1px)] [background-size:6px_6px]"></div>
       </div>
 
-      {/* --- THE ACTUAL NAVIGATION (Interactive Layer) --- */}
-      <nav 
-        className={`w-full fixed top-0 left-0 right-0 px-5 lg:px-8 xl:px-[8%] flex items-center justify-between z-50 transition-all duration-300
-          ${isScroll ? 'h-16' : 'h-24'} 
-          bg-transparent`} // REMOVED opacity-heavy background colors here
-      >
+      {/* --- THE ACTUAL NAVIGATION --- */}
+      <nav className={`w-full fixed top-0 left-0 right-0 px-5 lg:px-8 xl:px-[8%] flex items-center justify-between z-50 transition-all duration-300 ${isScroll ? 'h-16' : 'h-24'}`}>
+        
         {/* LOGO AREA */}
         <a href="#top" className="flex items-center">
           <div className="border-4 border-black bg-white px-4 py-1 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
             <h1 className="text-xl font-comic uppercase tracking-tighter text-black">
               J. Cohen<span className="text-red-700 font-black animate-pulse">_</span>
             </h1>
-            <p className="text-[10px] font-detective border-t border-black -mt-1 text-black">FULLSTACK_OPERATIVE</p>
+            <p className="text-[10px] font-detective border-t border-black -mt-1 text-black uppercase">Fullstack_Operative</p>
           </div>
         </a>
         
-        {/* NAV LINKS */}
-        <ul className={`hidden md:flex items-center gap-0 border-4 border-black shadow-[6px_6px_0px_0px_rgba(185,28,28,0.3)] overflow-hidden relative
-          ${darkMode ? 'bg-[#1a1a1a]' : 'bg-white'}`}
-        >
+        {/* DESKTOP NAV LINKS */}
+        <ul className={`hidden md:flex items-center gap-0 border-4 border-black shadow-[6px_6px_0px_0px_rgba(185,28,28,0.3)] overflow-hidden ${darkMode ? 'bg-[#1a1a1a]' : 'bg-white'}`}>
           {['The File', 'The Bio', 'Evidence', 'Informant'].map((label, i) => (
             <li key={label} className={`relative z-10 ${i !== 3 ? 'border-r-2 border-black' : ''} hover:bg-red-700 hover:text-white transition-colors group`}>
               <a className='font-detective font-bold uppercase px-6 py-3 block text-sm tracking-tighter' href={`#${['top', 'about', 'work', 'contact'][i]}`}>
@@ -100,45 +71,50 @@ const Navbar = () => {
             onClick={() => setDarkMode(!darkMode)} 
             className="p-2 border-2 border-black bg-white hover:bg-red-700 hover:invert transition-all active:scale-90 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
           >
-            <Image 
-              src={darkMode ? assets.sun_icon : assets.moon_icon} 
-              alt='toggle' 
-              className='w-5'
-            />
+            <Image src={darkMode ? assets.sun_icon : assets.moon_icon} alt='toggle' className='w-5' />
           </button>
           
-          <button className='block md:hidden border-2 border-black p-1 bg-white' onClick={openMenu}>
-            <Image src={assets.menu_black} alt="" className={`w-8 ${darkMode ? 'invert' : ''}`} />
+          {/* MOBILE MENU TRIGGER */}
+          <button className='block md:hidden border-2 border-black p-1 bg-white hover:bg-red-700 transition-colors' onClick={openMenu}>
+            <Image src={assets.menu_black} alt="menu" className="w-8" />
           </button>
         </div>
       </nav>
 
-      {/* SIDE MENU (Kept mostly original) */}
+      {/* --- SIDE MENU (The Slide-out Intel) --- */}
       <ul ref={sideMenuRef} 
-        className={`flex md:hidden flex-col gap-6 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-[60] h-screen transition-transform duration-500 border-l-8 border-black font-detective uppercase
+        className={`flex md:hidden flex-col gap-6 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-[100] h-screen transition-transform duration-500 border-l-8 border-black font-detective uppercase shadow-[-20px_0px_50px_rgba(0,0,0,0.5)]
         ${darkMode ? 'bg-[#0a0a0a] text-white' : 'bg-[#f4f1ea] text-black'}`}
-        style={{
-          backgroundImage: `url(${assets.typew?.src || assets.typew})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'right'
-        }}
       >
-        <div className="absolute right-6 top-6 border-2 border-black p-1 bg-white" onClick={closeMenu}>
-          <Image src={assets.close_black} alt='' className={`w-6 cursor-pointer`} />
+        {/* Background texture for Side Menu */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+
+        <div className="absolute right-6 top-6 border-2 border-black p-1 bg-white hover:bg-red-700 transition-colors cursor-pointer" onClick={closeMenu}>
+          <Image src={assets.close_black} alt='close' className="w-6" />
         </div>
         
-        {['HOME', 'ABOUT', 'WORK', 'CONTACT'].map((item) => (
-          <li key={item} className="border-b-2 border-black/20 pb-2">
-            <a onClick={closeMenu} href={`#${item.toLowerCase()}`} className="text-xl italic hover:text-red-700">
-              {item === 'CONTACT' ? '> INFORMANT' : `> ${item}`}
+        <p className="text-[10px] text-red-700 font-black tracking-[0.3em] mb-4 border-b border-red-700/30 pb-2">// NAVIGATION_LOG</p>
+
+        {['The File', 'The Bio', 'Evidence', 'Informant'].map((label, i) => (
+          <li key={label} className="group">
+            <a 
+              onClick={closeMenu} 
+              href={`#${['top', 'about', 'work', 'contact'][i]}`} 
+              className="text-xl italic font-black hover:text-red-700 flex items-center gap-2 transition-transform hover:translate-x-2"
+            >
+              <span className="text-red-700 opacity-0 group-hover:opacity-100">{'>'}</span>
+              {label}
             </a>
           </li>
         ))}
         
-        <div className="mt-auto opacity-30 text-[10px] font-mono leading-tight">
-          STATUS: CLASSIFIED<br/>
-          LOCATION: MANCHESTER<br/>
-          ENCRYPTION: ACTIVE
+        <div className="mt-auto pt-10 border-t border-black/20 text-[10px] font-mono leading-tight space-y-1">
+          <p className="flex justify-between"><span>STATUS:</span> <span className="text-red-700 font-bold">CLASSIFIED</span></p>
+          <p className="flex justify-between"><span>NODE:</span> <span>MANCHESTER</span></p>
+          <p className="flex justify-between"><span>ID:</span> <span>J_COHEN_89</span></p>
+          <div className="mt-4 bg-black text-white p-2 text-center text-[8px] animate-pulse">
+             ENCRYPTION_ACTIVE
+          </div>
         </div>
       </ul>
     </>
