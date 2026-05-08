@@ -11,17 +11,22 @@
 }
 
 .dark {
-  /* FIXED: Deep black background for maximum contrast with grayscale images */
   --background: #0a0a0a; 
   --foreground: #d1d1d1;
   --accent-red: #7f1d1d;
+}
+
+/* CRITICAL: Prevent horizontal scroll gaps on mobile */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Ovo', serif; 
-  overflow-x: hidden;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -40,4 +45,41 @@ body {
   .dark .bg-halftone {
     background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 0);
   }
+
+  /* 3D Perspective for File Opening */
+  .perspective-1500 {
+    perspective: 1500px;
+  }
+}
+
+/* --- ANIMATION KEYFRAMES --- */
+
+/* Scanning line on photos */
+@keyframes scan {
+  0% { top: -5%; }
+  100% { top: 105%; }
+}
+
+/* Footer Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pulse for "Active" indicators */
+@keyframes custom-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-scan {
+  animation: scan 4s linear infinite;
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+.animate-custom-pulse {
+  animation: custom-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
